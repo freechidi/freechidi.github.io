@@ -1,0 +1,83 @@
+@import url('font.css'); 
+@import url('everforest.css');
+
+:root {
+  --background-color: var(--everforest-bg);
+  --foreground-color: var(--everforest-fg);
+
+  --accent-color: var(--everforest-yellow);
+  --hide-color: var(--everforest-grey0);
+}
+
+html {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+body {
+  /* height max */
+  /* this seems the most reliable way to do it; i'm not a webdev */
+  flex-grow: 1;
+
+  margin: 0 auto;
+  padding: 0 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: var(--background-color);
+
+  color: var(--foreground-color);
+
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+header, footer {
+  padding: 50px 0; 
+
+  font-family: 'DM Mono', monospace;
+  font-size: 1.2rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  #date-of-publishing {
+    color: var(--hide-color);
+  }
+
+  #title {
+    font-family: sans-serif;
+    color: var(--everforest-blue);
+  }
+}
+
+header { flex-direction: column; }
+footer { flex-direction: row; }
+
+main { flex-grow: 1; }
+
+a {
+  color: var(--accent-color);
+
+  &.footnote-ref, &.footnote-back {
+    text-decoration: none;  
+  }
+}
+
+/* desktop */
+@media only screen and (min-width: 768px) {
+  body {
+    max-width: 1000px;
+  }
+  main {
+    padding: 0 50px;
+  }
+  /*#title {*/
+  /*  padding: 0 50px;*/
+  /*}*/
+}

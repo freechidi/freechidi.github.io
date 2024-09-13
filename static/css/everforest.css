@@ -1,0 +1,34 @@
+ :root {
+  /* https://github.com/sainnhe/everforest */
+
+  /* Background Colors */
+  --everforest-bg-hard: #2b3339;
+  --everforest-bg: #2f383e;
+  --everforest-bg-soft: #323d43;
+
+  /* Foreground Colors */
+  --everforest-fg: #d3c6aa;
+  --everforest-fg-light: #d3c6aa;
+  --everforest-fg-dark: #7a8478;
+
+  /* Accent Colors */
+  --everforest-red: #e67e80;
+  --everforest-orange: #e69875;
+  --everforest-yellow: #dbbc7f;
+  --everforest-green: #a7c080;
+  --everforest-aqua: #83c092;
+  --everforest-blue: #7fbbb3;
+  --everforest-purple: #d699b6;
+
+  /* UI Colors */
+  --everforest-bg-visual: #503946;
+  --everforest-bg-red: #4e3e43;
+  --everforest-bg-green: #404d44;
+  --everforest-bg-blue: #394f5a;
+  --everforest-bg-yellow: #4a4940;
+
+  /* Additional Shades */
+  --everforest-grey0: #7a8478;
+  --everforest-grey1: #859289;
+  --everforest-grey2: #9da9a0;
+ } 
