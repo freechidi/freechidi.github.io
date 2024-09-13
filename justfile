@@ -4,13 +4,17 @@ OUT_DIR := "output"
 CONTENT_DIR := "content"
 
 clean:
-  -rm -r {{OUT_DIR}} 
+  -rm -r {{OUT_DIR}}
+  -rm {{CONTENT_DIR}}/index.md
 
-build:
-  bash make_index.sh {{CONTENT_DIR}}
-  bash build.sh {{OUT_DIR}}
+build-index:
+  ./make_index.sh {{CONTENT_DIR}}
 
-build-clean: clean build 
+build: clean build-index
+  ./build.sh {{OUT_DIR}}
 
-serve: build-clean
+watch: clean build-index
+  ./build.sh {{OUT_DIR}} watch
+
+serve: watch
   cd output && python -m http.server && cd -

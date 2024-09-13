@@ -34,7 +34,7 @@ jobs:
         run: |
           sudo apt-get install pandoc
           sudo apt-get install just
-          just build-clean
+          just build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

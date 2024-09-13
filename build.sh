@@ -16,4 +16,8 @@ for file in content/*; do
 done
 
 # create symbolic link to static
-ln -rs ./static "./$1/static"
+if [[ "$2" == "watch" ]]; then
+  ln -s ../static "./$1/static"
+else
+  cp -r --target-directory="$1" static
+fi
