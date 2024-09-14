@@ -8,13 +8,13 @@ clean:
   -rm {{CONTENT_DIR}}/index.md
 
 build-index:
-  ./make_index.sh {{CONTENT_DIR}}
+  bash scripts/build_index.sh {{CONTENT_DIR}}
 
 build: clean build-index
-  ./build.sh {{OUT_DIR}}
+  bash scripts/build.sh {{OUT_DIR}}
 
 watch: clean build-index
-  ./build.sh {{OUT_DIR}} watch
+  bash scripts/build.sh {{OUT_DIR}} watch
 
 serve: watch
   cd output && python -m http.server && cd -
