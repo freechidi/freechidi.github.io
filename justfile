@@ -7,14 +7,18 @@ clean:
   -rm -r {{OUT_DIR}}
   -rm {{CONTENT_DIR}}/index.md
 
-build-index:
+build-index: clean
   bash scripts/build_index.sh {{CONTENT_DIR}}
 
 build: clean build-index
   bash scripts/build.sh {{OUT_DIR}}
 
-watch: clean build-index
-  bash scripts/build.sh {{OUT_DIR}} watch
-
-serve: watch
+serve: build
   cd output && python -m http.server && cd -
+
+
+serve-watch:
+  watchexec -e html,md,css -i "output/*" -r just serve
+
+nix-deps:
+  nix shell nixpkgs#pandoc nixpkgs#watchexec
