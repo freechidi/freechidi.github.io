@@ -13,6 +13,6 @@ for file in "$1"/*.md; do
   date=`grep -Po '(?<=date: ).+' $file`
 
   if [ "$filename" != "index" ]; then
-    echo "- [#$filename]($filename) | $title" >> "$1"/index.md
+    echo "- [#$filename]($filename.html) | $title" >> "$1"/index.md
   fi
 done

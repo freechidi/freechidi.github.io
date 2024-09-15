@@ -4,9 +4,11 @@
 :root {
   --background-color: var(--everforest-bg);
   --foreground-color: var(--everforest-fg);
-
   --accent-color: var(--everforest-yellow);
-  --hide-color: var(--everforest-grey0);
+
+  --alternate-color: var(--everforest-grey2);
+
+  --common-distance: 30px;
 }
 
 html {
@@ -21,7 +23,7 @@ body {
   flex-grow: 1;
 
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 var(--common-distance);
 
   display: flex;
   flex-direction: column;
@@ -38,7 +40,7 @@ body {
 }
 
 header, footer {
-  padding: 50px 0; 
+  padding: var(--common-distance) 0; 
 
   font-family: 'DM Mono', monospace;
   font-size: 1.2rem;
@@ -47,7 +49,7 @@ header, footer {
   justify-content: space-between;
 
   #date-of-publishing {
-    color: var(--hide-color);
+    color: var(--alternate-color);
   }
 
   #title {
@@ -67,6 +69,13 @@ a {
   &.footnote-ref, &.footnote-back {
     text-decoration: none;  
   }
+  /* links are not wrapped automatically in chrome */
+  word-break: break-word;
+}
+
+blockquote {
+  color: var(--alternate-color);
+  margin: calc(.5 * var(--common-distance));
 }
 
 /* desktop */
@@ -75,9 +84,6 @@ a {
     max-width: 1000px;
   }
   main {
-    padding: 0 50px;
+    padding: 0 var(--common-distance);
   }
-  /*#title {*/
-  /*  padding: 0 50px;*/
-  /*}*/
 }

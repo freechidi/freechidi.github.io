@@ -13,7 +13,7 @@ fi
 # render pandoc files
 for file in content/*; do
   filename=`basename ${file%.*}`
-  pandoc --shift-heading-level-by=-1 --template ./template.html "$file" -o "$1/$filename.html"
+  pandoc --from markdown+smart --shift-heading-level-by=-1 --template ./template.html "$file" -o "$1/$filename.html"
 done
 
 # create symbolic link to static
