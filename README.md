@@ -1,8 +1,8 @@
 # Thinking My Mind
 
-I've always struggled with certainty and taking risks, which for me means that 
-I tend to adopt other people's way of thinking as that is the safer bet. This
-place is my antidote to those tendencies.
+While I am comfortable speaking my mind, I don't think I'm very comfortable
+thinking it. Hopefully this project will help me find that comfort. Only one
+way to find out.
 
 I hope you enjoy.
 
