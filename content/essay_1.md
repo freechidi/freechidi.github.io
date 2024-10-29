@@ -1,7 +1,8 @@
 ---
-title: Why Act?
 date: 28-10-2024
 ---
+
+# Why Act?
 
 I've always found it difficult to follow through with things. Not only in
 action, but also in thought which seems to suggest I don't really amount to

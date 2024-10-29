@@ -7,7 +7,7 @@ content_dir="$1"
 
 cat README.md > "$1"/index.md 
 
-for file in "$1"/*.md; do
+for file in $(ls -t "$1"/*.md); do
   filename=`basename ${file%.*}`
   title=`grep -Po '(?<=^#[^#]).+' $file`
   date=`grep -Po '(?<=date: ).+' $file`
