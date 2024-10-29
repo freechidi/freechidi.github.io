@@ -4,9 +4,10 @@
 :root {
 	--background-color: var(--bg);
 	--foreground-color: var(--fg);
-	--accent-color: var(--yellow);
 
-	--alternate-color: var(--grey2);
+	--title-color: var(--purple);
+	--link-color: var(--yellow);
+	--alt-text-color: var(--grey2);
 
 	--common-distance: 30px;
 }
@@ -34,6 +35,7 @@ body {
 	color: var(--foreground-color);
 
 	font-family: "DM Sans", sans-serif;
+
 	font-weight: 400;
 	font-optical-sizing: auto;
 	font-style: normal;
@@ -50,13 +52,17 @@ footer {
 	justify-content: space-between;
 
 	#date-of-publishing {
-		color: var(--alternate-color);
+		color: var(--alt-text-color);
 	}
 
 	#title {
 		font-family: sans-serif;
-		color: var(--purple);
+		color: var(--title-color);
 	}
+}
+
+code {
+	font-family: 'DM Mono', monospace;
 }
 
 header {
@@ -72,7 +78,7 @@ main {
 }
 
 a {
-	color: var(--accent-color);
+	color: var(--link-color);
 
 	&.footnote-ref,
 	&.footnote-back {
@@ -84,7 +90,7 @@ a {
 }
 
 blockquote {
-	color: var(--alternate-color);
+	color: var(--alt-text-color);
 	margin: calc(.5 * var(--common-distance));
 }
 
