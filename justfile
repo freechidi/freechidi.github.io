@@ -17,8 +17,8 @@ serve: build
   cd output && python -m http.server && cd -
 
 
-serve-watch:
+serve-watch: 
   watchexec -e html,md,css -i "output/*" -r just serve
 
-nix-deps:
-  nix shell nixpkgs#pandoc nixpkgs#watchexec
+serve-watch-nix:
+  nix-shell -p pandoc watchexec --command "just serve-watch"
