@@ -1,3 +1,7 @@
+---
+date: 25-09-2024
+---
+
 # Walking
 
 from one step to another   
