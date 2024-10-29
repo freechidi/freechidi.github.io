@@ -1,89 +1,100 @@
-@import url('font.css'); 
-@import url('everforest.css');
+@import url('font.css');
+@import url('catppuccin.css');
 
 :root {
-  --background-color: var(--everforest-bg);
-  --foreground-color: var(--everforest-fg);
-  --accent-color: var(--everforest-yellow);
+	--background-color: var(--bg);
+	--foreground-color: var(--fg);
+	--accent-color: var(--yellow);
 
-  --alternate-color: var(--everforest-grey2);
+	--alternate-color: var(--grey2);
 
-  --common-distance: 30px;
+	--common-distance: 30px;
 }
 
 html {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
 }
 
 body {
-  /* height max */
-  /* this seems the most reliable way to do it; i'm not a webdev */
-  flex-grow: 1;
+	/* height max */
+	/* this seems the most reliable way to do it; i'm not a webdev */
+	flex-grow: 1;
 
-  margin: 0 auto;
-  padding: 0 var(--common-distance);
+	margin: 0 auto;
+	padding: 0 var(--common-distance);
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
-  background: var(--background-color);
+	background: var(--background-color);
 
-  color: var(--foreground-color);
+	color: var(--foreground-color);
 
-  font-family: "DM Sans", sans-serif;
-  font-weight: 400;
-  font-optical-sizing: auto;
-  font-style: normal;
+	font-family: "DM Sans", sans-serif;
+	font-weight: 400;
+	font-optical-sizing: auto;
+	font-style: normal;
 }
 
-header, footer {
-  padding: var(--common-distance) 0; 
+header,
+footer {
+	padding: var(--common-distance) 0;
 
-  font-family: 'DM Mono', monospace;
-  font-size: 1.2rem;
+	font-family: 'DM Mono', monospace;
+	font-size: 1.2rem;
 
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 
-  #date-of-publishing {
-    color: var(--alternate-color);
-  }
+	#date-of-publishing {
+		color: var(--alternate-color);
+	}
 
-  #title {
-    font-family: sans-serif;
-    color: var(--everforest-blue);
-  }
+	#title {
+		font-family: sans-serif;
+		color: var(--purple);
+	}
 }
 
-header { flex-direction: column; }
-footer { flex-direction: row; }
+header {
+	flex-direction: column;
+}
 
-main { flex-grow: 1; }
+footer {
+	flex-direction: row;
+}
+
+main {
+	flex-grow: 1;
+}
 
 a {
-  color: var(--accent-color);
+	color: var(--accent-color);
 
-  &.footnote-ref, &.footnote-back {
-    text-decoration: none;  
-  }
-  /* links are not wrapped automatically in chrome */
-  word-break: break-word;
+	&.footnote-ref,
+	&.footnote-back {
+		text-decoration: none;
+	}
+
+	/* links are not wrapped automatically in chrome */
+	word-break: break-word;
 }
 
 blockquote {
-  color: var(--alternate-color);
-  margin: calc(.5 * var(--common-distance));
+	color: var(--alternate-color);
+	margin: calc(.5 * var(--common-distance));
 }
 
 /* desktop */
 @media only screen and (min-width: 768px) {
-  body {
-    max-width: 1000px;
-  }
-  main {
-    padding: 0 var(--common-distance);
-  }
+	body {
+		max-width: 1000px;
+	}
+
+	main {
+		padding: 0 var(--common-distance);
+	}
 }
